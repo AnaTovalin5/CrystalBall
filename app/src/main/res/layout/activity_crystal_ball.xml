@@ -4,17 +4,20 @@
     android:layout_height="match_parent"
     tools:context=".CrystalBall">
 
+    <!-- Sets Background Image-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/ball01"
         android:background="#000"
         />
-    
+
+    <!-- Adds background image -->
     <TextView
         android:id="@+id/answerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         />
 
 </RelativeLayout>
