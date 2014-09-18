@@ -36,8 +36,11 @@ public class CrystalBall extends Activity {
             acceleration = acceleration * 0.9f + delta;
 
             if(acceleration > 15) {
-                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.crystal_ball);
+                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.crystal_ball); //plays sound after shaken
                 mediaPlayer.start();
+
+                answerText = (TextView) findViewById(R.id.answerText); //displays text
+                answerText.setText(Predictions.get().getPrediction());
             }
         }
 
@@ -58,9 +61,6 @@ public class CrystalBall extends Activity {
         acceleration = 0.0f;
         currentAcceleration = sensorManager.GRAVITY_EARTH;
         previousAcceleration = sensorManager.GRAVITY_EARTH;
-
-        answerText = (TextView) findViewById(R.id.answerText);
-        answerText.setText(Predictions.get().getPrediction());
     }
 
     @Override
