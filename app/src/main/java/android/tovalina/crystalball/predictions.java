@@ -1,5 +1,7 @@
 package android.tovalina.crystalball;
 
+import java.util.Random;
+
 public class Predictions {
 
     private static Predictions predictions; //setting variables
@@ -20,6 +22,8 @@ public class Predictions {
     }
 
     public String getPrediction() { //determines which fortune will show on the screen
+        Random rand = new Random();
+        int n = rand.nextInt();
         return answers[1];
     }
 }

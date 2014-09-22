@@ -9,6 +9,8 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.FloatMath;
+import android.view.animation.AnimationUtils;
+import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +43,8 @@ public class CrystalBall extends Activity {
 
                 answerText = (TextView) findViewById(R.id.answerText); //displays text
                 answerText.setText(Predictions.get().getPrediction());
+
+                answerText.startAnimation(AnimationUtils.loadAnimation(CrystalBall.this, android.R.anim.slide_in_left));//adds animation
             }
         }
 
