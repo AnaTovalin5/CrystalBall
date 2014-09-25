@@ -2,14 +2,18 @@ package android.tovalina.crystalball;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.AnimationDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.FloatMath;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +28,8 @@ public class CrystalBall extends Activity {
     private float acceleration;
     private float currentAcceleration;
     private float previousAcceleration;
+
+    AnimationDrawable ballRoll;
 
     private final SensorEventListener sensorListener = new SensorEventListener() {
         @Override
@@ -44,7 +50,9 @@ public class CrystalBall extends Activity {
                 answerText = (TextView) findViewById(R.id.answerText); //displays text
                 answerText.setText(Predictions.get().getPrediction());
 
-                answerText.startAnimation(AnimationUtils.loadAnimation(CrystalBall.this, android.R.anim.slide_in_left));//adds animation
+                answerText.startAnimation(AnimationUtils.loadAnimation(CrystalBall.this, android.R.anim.slide_in_left));//adds animation to text
+
+                //ballRoll.start();
             }
         }
 
@@ -65,6 +73,11 @@ public class CrystalBall extends Activity {
         acceleration = 0.0f;
         currentAcceleration = sensorManager.GRAVITY_EARTH;
         previousAcceleration = sensorManager.GRAVITY_EARTH;
+
+//        ImageView ballBackground = (ImageView) findViewById(R.id.animation);
+//        ballBackground.setBackgroundResource(R.drawable.ball_images);
+//        ballRoll = (AnimationDrawable) ballBackground.getBackground();
+
     }
 
     @Override

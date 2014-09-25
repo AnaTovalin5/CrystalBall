@@ -10,7 +10,8 @@ public class Predictions {
     private Predictions() {
         answers = new String[] { //contains all predictions
                 "Your wishes will come true.",
-                "Your wishes will NEVER come true."
+                "Your wishes will NEVER come true.",
+                "SHARKISHA SAYS NO"
         };
     }
 
@@ -24,6 +25,6 @@ public class Predictions {
     public String getPrediction() { //determines which fortune will show on the screen
         Random rand = new Random();
         int n = rand.nextInt();
-        return answers[1];
+        return answers[2];
     }
 }

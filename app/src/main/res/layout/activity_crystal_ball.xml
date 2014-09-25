@@ -8,8 +8,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ball01"
         android:background="#000"
+        android:src="@drawable/ball01"
+        android:id="@+id/animation"
         />
 
     <!-- Adds background image -->
