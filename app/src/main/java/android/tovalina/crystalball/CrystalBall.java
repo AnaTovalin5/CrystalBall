@@ -52,7 +52,15 @@ public class CrystalBall extends Activity {
 
                 answerText.startAnimation(AnimationUtils.loadAnimation(CrystalBall.this, android.R.anim.slide_in_left));//adds animation to text
 
-                //ballRoll.start();
+                ImageView background = (ImageView) findViewById(R.id.animation);
+                background.setBackgroundResource(R.drawable.ball_images);
+                AnimationDrawable ballRoll = (AnimationDrawable) background.getBackground();
+
+                if(ballRoll.isRunning())  {
+                    ballRoll.stop();
+                } else {
+                    ballRoll.start();
+                }
             }
         }
 
@@ -74,11 +82,9 @@ public class CrystalBall extends Activity {
         currentAcceleration = sensorManager.GRAVITY_EARTH;
         previousAcceleration = sensorManager.GRAVITY_EARTH;
 
-//        ImageView ballBackground = (ImageView) findViewById(R.id.animation);
-//        ballBackground.setBackgroundResource(R.drawable.ball_images);
-//        ballRoll = (AnimationDrawable) ballBackground.getBackground();
-
-    }
+        ImageView background = (ImageView) findViewById(R.id.animation);
+        background.setBackgroundResource(R.drawable.ball01);
+      }
 
     @Override
     protected void onResume() {

@@ -1,5 +1,8 @@
 package android.tovalina.crystalball;
 
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+
 import java.util.Random;
 
 public class Predictions {
@@ -11,7 +14,12 @@ public class Predictions {
         answers = new String[] { //contains all predictions
                 "Your wishes will come true.",
                 "Your wishes will NEVER come true.",
-                "SHARKISHA SAYS NO"
+                "SHARKISHA SAYS NO",
+                "Your wish is my command",
+                "MEGAN IS LAME",
+                "Try Again Later",
+                "Why you got to be so rude?",
+                "I don't know"
         };
     }
 
@@ -23,8 +31,9 @@ public class Predictions {
     }
 
     public String getPrediction() { //determines which fortune will show on the screen
-        Random rand = new Random();
-        int n = rand.nextInt();
-        return answers[2];
+        int idx = new Random().nextInt(answers.length);
+        String random = (answers[idx]);
+        return random;
+
     }
 }
