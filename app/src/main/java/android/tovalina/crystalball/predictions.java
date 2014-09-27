@@ -19,7 +19,9 @@ public class Predictions {
                 "MEGAN IS LAME",
                 "Try Again Later",
                 "Why you got to be so rude?",
-                "I don't know"
+                "I don't know",
+                "You will get eaten by crows",
+                "Chellie is evil"
         };
     }
 
@@ -31,7 +33,7 @@ public class Predictions {
     }
 
     public String getPrediction() { //determines which fortune will show on the screen
-        int idx = new Random().nextInt(answers.length);
+        int idx = new Random().nextInt(answers.length); //makes random integer which makes a random prediction
         String random = (answers[idx]);
         return random;
 
