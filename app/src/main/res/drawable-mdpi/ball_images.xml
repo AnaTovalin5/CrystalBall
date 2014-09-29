@@ -8,5 +8,19 @@
     <item android:drawable="@drawable/fly6" android:duration="50" />
     <item android:drawable="@drawable/fly7" android:duration="50" />
     <item android:drawable="@drawable/fly8" android:duration="50" />
+    <item android:drawable="@drawable/fly9" android:duration="70" />
+    <item android:drawable="@drawable/fly10" android:duration="70" />
+    <item android:drawable="@drawable/fly11" android:duration="70" />
+    <item android:drawable="@drawable/fly12" android:duration="70" />
+    <item android:drawable="@drawable/fly13" android:duration="70" />
+    <item android:drawable="@drawable/fly14" android:duration="70" />
+    <item android:drawable="@drawable/fly15" android:duration="70" />
+    <item android:drawable="@drawable/fly14" android:duration="70" />
+    <item android:drawable="@drawable/fly13" android:duration="70" />
+    <item android:drawable="@drawable/fly12" android:duration="70" />
+    <item android:drawable="@drawable/fly11" android:duration="70" />
+    <item android:drawable="@drawable/fly10" android:duration="70" />
+    <item android:drawable="@drawable/fly9" android:duration="70" />
+    <item android:drawable="@drawable/fly8" android:duration="70" />
 </animation-list>
 

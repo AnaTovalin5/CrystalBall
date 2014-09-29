@@ -53,7 +53,7 @@ public class CrystalBall extends Activity {
             elapsed = currentTime - previousTime;
             delay += elapsed;
 
-            if(acceleration > 15 && delay >= 5000) {
+            if(acceleration > 15 && delay >= 4000) {
                 MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.crystal_ball); //plays sound after shaken
                 mediaPlayer.start();
 
@@ -96,7 +96,7 @@ public class CrystalBall extends Activity {
         previousAcceleration = sensorManager.GRAVITY_EARTH;
 
         ImageView background = (ImageView) findViewById(R.id.animation); //part of animation for dragon
-        background.setBackgroundResource(R.drawable.fly1);
+        background.setBackgroundResource(R.drawable.fly8);
 
         previousTime = System.currentTimeMillis(); //sets times
         currentTime = System.currentTimeMillis();
